@@ -1,0 +1,150 @@
+
+**** 05/20/20 10:46:57 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-shuntai"  [ E:\PSpice\tongdianshiyan1\gaopinxiaoxinhao-pspicefiles\schematic1\shuntai.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "shuntai.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\baoka\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC LIN 1000 1meg 500meg
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source GAOPINXIAOXINHAO
+C_C1         N00223 N00230  0.1uf  TC=0,0 
+R_R1         N00230 N00443  15k TC=0,0 
+R_R2         0 N00230  6.2k TC=0,0 
+R_R3         N00298 N00443  2k TC=0,0 
+R_R4         0 N00251  1k TC=0,0 
+Q_Q1         N00298 N00230 N00251 Q2N3904
+C_C2         N00298 N00443  22p  TC=0,0 
+C_C3         N00298 N00443  22pf  TC=0,0 
+L_L1         N00298 N00443  4.7uH  
+C_C4         N00504 N00298  0.1p  TC=0,0 
+R_R5         0 N00504  10k TC=0,0 
+V_V2         N00443 0 12Vdc
+C_C5         0 N00251  0.1uf  TC=0,0 
+V_V3         N00223 0  AC 10mv
++SIN 0 10mv 10.7meg 0 0 0
+
+**** RESUMING shuntai.cir ****
+.END
+
+**** 05/20/20 10:46:57 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-shuntai"  [ E:\PSpice\tongdianshiyan1\gaopinxiaoxinhao-pspicefiles\schematic1\shuntai.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Q2N3904         
+               NPN             
+       LEVEL    1            
+          IS    6.734000E-15 
+          BF  416.4          
+          NF    1            
+         VAF   74.03         
+         IKF     .06678      
+         ISE    6.734000E-15 
+          NE    1.259        
+          BR     .7371       
+          NR    1            
+         ISS    0            
+          RB   10            
+          RE    0            
+          RC    1            
+         CJE    4.493000E-12 
+         VJE     .75         
+         MJE     .2593       
+         CJC    3.638000E-12 
+         VJC     .75         
+         MJC     .3085       
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          TF  301.200000E-12 
+         XTF    2            
+         VTF    4            
+         ITF     .4          
+          TR  239.500000E-09 
+         XTB    1.5          
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 05/20/20 10:46:57 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-shuntai"  [ E:\PSpice\tongdianshiyan1\gaopinxiaoxinhao-pspicefiles\schematic1\shuntai.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00223)    0.0000 (N00230)    3.4365 (N00251)    2.7469 (N00298)   12.0000     
+
+(N00443)   12.0000 (N00504)    0.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2        -3.301E-03
+    V_V3         0.000E+00
+
+    TOTAL POWER DISSIPATION   3.96E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 05/20/20 10:46:57 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-shuntai"  [ E:\PSpice\tongdianshiyan1\gaopinxiaoxinhao-pspicefiles\schematic1\shuntai.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .05
+

@@ -1,0 +1,16 @@
+* source GAOPINXIAOXINHAO
+C_C1         N00223 N00230  0.1uf  TC=0,0 
+R_R1         N00230 N00443  15k TC=0,0 
+R_R2         0 N00230  6.2k TC=0,0 
+R_R3         N00298 N00443  2k TC=0,0 
+R_R4         0 N00251  1k TC=0,0 
+Q_Q1         N00298 N00230 N00251 Q2N3904
+C_C2         N00298 N00443  22p  TC=0,0 
+C_C3         N00298 N00443  22pf  TC=0,0 
+L_L1         N00298 N00443  4.7uH  
+C_C4         N00504 N00298  0.1p  TC=0,0 
+R_R5         0 N00504  10k TC=0,0 
+V_V2         N00443 0 12Vdc
+C_C5         0 N00251  0.1uf  TC=0,0 
+V_V3         N00223 0  AC 10mv
++SIN 0 10mv 10.7meg 0 0 0

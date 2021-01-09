@@ -1,0 +1,13 @@
+* source TONGDIAN
+V_V1         N00330 0  AC 1.5v
++SIN 0 1.5v 15meg 0 0 0
+L_L1         N00319 N00330  1m  
+R_R1         0 N00319  5.1 TC=0,0 
+C_C1         N00359 0  20u  TC=0,0 
+L_L2         N00359 N00352  113n  
+L_L3         N00374 N00359  1m  
+C_C2         N00352 N00359  1n  TC=0,0 
+R_R2         N00359 N00352  {var} TC=0,0 
+V_V2         N00374 0 12v
+Q_Q1         N00352 N00330 0 Q2N2222
+.PARAM  var=22

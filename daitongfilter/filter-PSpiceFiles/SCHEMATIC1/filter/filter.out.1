@@ -1,0 +1,201 @@
+
+**** 06/20/20 10:01:05 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-filter"  [ E:\PSPICE\daitongfilter\filter-PSpiceFiles\SCHEMATIC1\filter.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "filter.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\baoka\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 10000us 0 1u SKIPBP 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source FILTER
+X_U1A         N00344 N00358 V+ V- N00362 LM324
+R_R1         N01208 N00330  980.3 TC=0,0 
+C_C1         N00330 N00344  10n  TC=0,0 
+C_C2         0 N00330  10n  TC=0,0 
+R_R2         0 N00344  475.7 TC=0,0 
+R_R3         N00358 N00362  1k TC=0,0 
+R_R4         0 N00358  240.8 TC=0,0 
+R_R5         N00330 N00362  924.1 TC=0,0 
+X_U1B         N00815 N00827 V+ V- N00831 LM324
+C_C3         N00795 N00815  10n  TC=0,0 
+R_R6         N00362 N00795  685.9 TC=0,0 
+R_R7         0 N00815  332.8 TC=0,0 
+R_R8         N00827 N00831  1k TC=0,0 
+C_C4         0 N00795  10n  TC=0,0 
+R_R10         N00795 N00831  646.6 TC=0,0 
+R_R9         0 N00827  240.8 TC=0,0 
+V_V1         N01208 0  
++PULSE -1.5 1.5 100us 50us 50us 0 100us
+
+**** RESUMING filter.cir ****
+.END
+
+**** 06/20/20 10:01:05 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-filter"  [ E:\PSPICE\daitongfilter\filter-PSpiceFiles\SCHEMATIC1\filter.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1A.dx        X_U1A.dy        X_U1B.dx        X_U1B.dy        
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03    1               1.000000E-03 
+         CJO                   10.000000E-12                   10.000000E-12 
+
+
+**** 06/20/20 10:01:05 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-filter"  [ E:\PSPICE\daitongfilter\filter-PSpiceFiles\SCHEMATIC1\filter.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1A.qx        X_U1B.qx        
+               PNP             PNP             
+       LEVEL    1               1            
+          IS  800.000000E-18  800.000000E-18 
+          BF  166.7           166.7          
+          NF    1               1            
+          BR    1               1            
+          NR    1               1            
+         ISS    0               0            
+          RE    0               0            
+          RC    0               0            
+         CJE    0               0            
+         VJE     .75             .75         
+         CJC    0               0            
+         VJC     .75             .75         
+         MJC     .33             .33         
+        XCJC    1               1            
+         CJS    0               0            
+         VJS     .75             .75         
+          KF    0               0            
+          AF    1               1            
+          CN    2.2             2.2          
+           D     .52             .52         
+
+
+**** 06/20/20 10:01:05 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-filter"  [ E:\PSPICE\daitongfilter\filter-PSpiceFiles\SCHEMATIC1\filter.sim ] 
+
+
+ ****     Current Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1A.sw2       X_U1A.sw1       X_U1A.sw3       X_U1A.sw4       
+         RON    1               1               1               1            
+        ROFF   10.000000E+06   10.000000E+06   10.000000E+06   10.000000E+06 
+         ION    0              -1.000000E-06   -1.000000E-06    0            
+        IOFF   -1.000000E-06    0               0              -1.000000E-06 
+
+
+               X_U1B.sw2       X_U1B.sw1       X_U1B.sw3       X_U1B.sw4       
+         RON    1               1               1               1            
+        ROFF   10.000000E+06   10.000000E+06   10.000000E+06   10.000000E+06 
+         ION    0              -1.000000E-06   -1.000000E-06    0            
+        IOFF   -1.000000E-06    0               0              -1.000000E-06 
+
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+
+ERROR(ORPSIM-15138): Convergence problem in transient analysis at Time =  310.0E-09.
+         Time step =  290.7E-21, minimum allowable step size =  1.000E-18
+
+  These voltages failed to converge:
+
+    V(X_U1A.a)                =   396.62mV  \   397.99mV
+    V(X_U1A.b)                =   -87.88mV  \   -87.57mV
+
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   V+)     .7847  (   V-)    -.1789  (N00330)    -.0449 (N00344)    -.0434     
+
+(N00358)    -.0063 (N00362)    -.0324 (N00795)-685.8E-06 (N00815)-668.0E-06     
+
+(N00827)    -.0031 (N00831)    -.0162 (N01208)   -1.5000 (X_U1A.6)-212.3E-06    
+
+(X_U1A.7)    -.0325                   (X_U1A.8)    -.0325                       
+
+(X_U1A.9)    0.0000                   (X_U1A.a)     .3966                       
+
+(X_U1A.b)    -.0879                   (X_U1B.6)    -.0016                       
+
+(X_U1B.7)-712.9E-06                   (X_U1B.8)-712.9E-06                       
+
+(X_U1B.9)    0.0000                   (X_U1B.a)     .7844                       
+
+(X_U1B.b)-310.1E-06                   (X_U1A.10)     .5800                      
+
+(X_U1A.11)    -.1556                  (X_U1A.12)    -.1228                      
+
+(X_U1A.13)     .5723                  (X_U1A.14)     .5600                      
+
+(X_U1A.53)    -.7153                  (X_U1A.54)     .6431                      
+
+(X_U1A.90)-499.6E-06                  (X_U1A.91)   40.0000                      
+
+(X_U1A.92)  -40.0000                  (X_U1A.99)     .3029                      
+
+(X_U1B.10)     .6058                  (X_U1B.11)    -.1382                      
+
+(X_U1B.12)    -.1402                  (X_U1B.13)     .5915                      
+
+(X_U1B.14)     .5924                  (X_U1B.53)    -.7153                      
+
+(X_U1B.54)     .6431                  (X_U1B.90)     .3101                      
+
+(X_U1B.91)   40.0000                  (X_U1B.92)  -40.0000                      
+
+(X_U1B.99)     .3029                  
+
+
+**** Interrupt ****

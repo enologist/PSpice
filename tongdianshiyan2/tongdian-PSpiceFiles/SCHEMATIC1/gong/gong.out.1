@@ -1,0 +1,52 @@
+
+**** 05/20/20 14:58:13 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-gong"  [ E:\PSpice\tongdianshiyan2\tongdian-PSpiceFiles\SCHEMATIC1\gong.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "gong.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\baoka\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1000ns 0 1ns 
+.STEP LIN PARAM var 22 202 20 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source TONGDIAN
+V_V1         N00330 0  AC 1.5v
++SIN 0 1.5v 15meg 0 0 0
+L_L1         N00319 N00330  1m  
+R_R1         0 N00319  5.1 TC=0,0 
+C_C1         N00359 0  20u  TC=0,0 
+L_L2         N00359 N00352  113n  
+L_L3         N00374 N00359  1m  
+C_C2         N00352 N00359  1n  TC=0,0 
+R_R2         N00359 N00352  {var} TC=0,0 
+V_V2         N00374 0 12v
+Q_Q1         N00352 N00330 0 Q2N2222
+.PARAM  dianzu= var=22
+----------------$
+ERROR(ORPSIM-16152): Invalid number
+
+**** RESUMING gong.cir ****
+.END
+

@@ -1,0 +1,88 @@
+
+**** 05/13/20 11:29:38 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-timeanalysis"  [ E:\PSPICE\tongdianshiyan4\AMtiaozhi-PSpiceFiles\SCHEMATIC1\timeanalysis.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "timeanalysis.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\baoka\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 3ms 0 0.01m 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source AMTIAOZHI
+E_MULT1         N00199 0 VALUE {V(N00123)*V(N00119)}
+V_V1         N00123 0  AC 1.2v
++SIN 0v 1.2v 1k 0 0 0
+V_V2         N00119 0  AC 1v
++SIN 0v 1v 30k 0 0 0
+
+**** RESUMING timeanalysis.cir ****
+.END
+
+**** 05/13/20 11:29:38 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-timeanalysis"  [ E:\PSPICE\tongdianshiyan4\AMtiaozhi-PSpiceFiles\SCHEMATIC1\timeanalysis.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00119)    0.0000 (N00123)    0.0000 (N00199)    0.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 05/13/20 11:29:38 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-timeanalysis"  [ E:\PSPICE\tongdianshiyan4\AMtiaozhi-PSpiceFiles\SCHEMATIC1\timeanalysis.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .02
+

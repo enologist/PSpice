@@ -1,0 +1,6 @@
+* source AMTIAOZHI
+E_MULT1         N00199 0 VALUE {V(N00123)*V(N00119)}
+V_V1         N00123 0  AC 1.2v
++SIN 0v 1.2v 1k 0 0 0
+V_V2         N00119 0  AC 1v
++SIN 0v 1v 30k 0 0 0

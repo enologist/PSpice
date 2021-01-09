@@ -1,0 +1,54 @@
+
+**** 05/19/20 22:23:01 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-shuntai"  [ E:\PSpice\tongdianshiyan1\gaopinxiaoxinhao-PSpiceFiles\SCHEMATIC1\shuntai.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "shuntai.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\baoka\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1000ns 0 10ns 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source GAOPINXIAOXINHAO
+C_C1         N00223 N00230  0.1uf  TC=0,0 
+R_R1         N00230 N00443  15k TC=0,0 
+R_R2         0 N00230  6.2k TC=0,0 
+R_R3         N00298 N00443  2k TC=0,0 
+R_R4         0 N00251  2k TC=0,0 
+Q_Q1         N00298 N00230 N00251 Q2N3904
+C_C2         N00298 N00443  22p  TC=0,0 
+C_C3         N00298 N00443  22pf  TC=0,0 
+L_L1         N00298 N00443  4.7uH  
+C_C4         N00504 N00298  0.1p  TC=0,0 
+R_R5         0 N00504  10k TC=0,0 
+V_V2         N00443 0 12Vdc
+C_C5         0 N00251  0.1uf  TC=0,0 
+
+**** RESUMING shuntai.cir ****
+.END
+
+ERROR(ORPSIM-15141): Less than 2 connections at node N00223.
+
+ERROR(ORPSIM-15142): Node N00223 is floating
+
